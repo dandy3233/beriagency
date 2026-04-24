@@ -2,8 +2,24 @@ import { ShieldCheck, Heart, Lightbulb, Globe2, Sparkles, Target, Eye } from "lu
 
 export const ABOUT_HERO = {
   eyebrow: "About BERI AGENCY",
-  title: "We make travel work — for Africa, and for the world.",
+  title: "Travel Beyond",
+  subtitle: "Limits.",
   description: "BERI AGENCY is a modern travel management company focused on delivering efficient, transparent, and cost-effective travel solutions across Africa and international markets.",
+};
+
+export const ABOUT_STATS = {
+  title: "Why BERI?",
+  items: [
+    { label: "Destination Experts", val: "Global Network" },
+    { label: "24/7 Concierge", val: "Travel Support" },
+    { label: "Tailored Solutions", val: "Custom Itineraries" }
+  ]
+};
+
+export const ABOUT_CTA = {
+  title: "Ready to start \nyour next journey?",
+  linkText: "Explore Services",
+  linkHref: "/services"
 };
 
 export const ABOUT_CARDS = [
@@ -55,3 +71,31 @@ export const VALUES = [
     desc: "An African-rooted network with worldwide partnerships.",
   },
 ];
+
+export const TEAM = {
+  eyebrow: "Our Team",
+  title: "The experts behind Beri Agency",
+  description: "Our diverse team of travel professionals is dedicated to making your global journeys seamless and stress-free.",
+  members: [
+    {
+      name: "Dandy Abraham",
+      role: "Founder & CEO",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dandy"
+    },
+    {
+      name: "Sara Tekle",
+      role: "Operations Manager",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sara"
+    },
+    {
+      name: "Dawit Kassahun",
+      role: "Logistics Lead",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dawit"
+    },
+    {
+      name: "Helen Gebre",
+      role: "Corporate Sales",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Helen"
+    }
+  ]
+};

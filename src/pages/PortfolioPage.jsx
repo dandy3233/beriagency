@@ -1,21 +1,41 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { MapPin, TrendingUp, Tag } from "lucide-react";
 import { SectionHeader } from "@/components/site/section-header";
 import { CTABand } from "@/components/site/cta-band";
 import { cn } from "@/lib/utils";
+import p2 from "@/assets/portfolio/project-2.png";
 import { PROJECTS, FILTERS, PORTFOLIO_HERO, PORTFOLIO_FILTER_HEADER } from "@/data/portfolio";
+import Pagination from "@/components/site/pagination";
 
 export function PortfolioPage() {
   const [active, setActive] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginatedProjects, setPaginatedProjects] = useState([]);
+  const itemsPerPage = 6;
+
   const visible = useMemo(
     () => (active === "All" ? PROJECTS : PROJECTS.filter((p) => p.type === active)),
     [active],
   );
 
+  // Reset page to 1 when filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [active]);
+
   return (
     <>
-      <section className="bg-primary-deep text-white">
-        <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
+      <section className="relative overflow-hidden bg-primary-deep text-white">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={p2}
+            alt="portfolio"
+            className="h-full w-full object-cover transition-transform duration-[10s] hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-primary-deep/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/80 via-primary-deep/40 to-transparent" />
+        </div>
+        <div className="container-px relative z-10 mx-auto max-w-7xl pt-40 pb-20 md:pt-48 md:pb-28 lg:pt-52 lg:pb-32">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             {PORTFOLIO_HERO.eyebrow}
           </p>
@@ -54,7 +74,7 @@ export function PortfolioPage() {
         </div>
 
         <div className="mt-10 grid gap-8 md:grid-cols-2">
-          {visible.map((p) => (
+          {paginatedProjects.map((p) => (
             <article
               key={p.title}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-elegant"
@@ -92,10 +112,18 @@ export function PortfolioPage() {
           ))}
         </div>
 
-        {visible.length === 0 && (
+        {visible.length === 0 ? (
           <p className="mt-12 text-center text-muted-foreground">
             {PORTFOLIO_FILTER_HEADER.emptyMessage}
           </p>
+        ) : (
+          <Pagination
+            items={visible}
+            itemsPerPage={itemsPerPage}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+            onDataUpdate={setPaginatedProjects}
+          />
         )}
       </section>
 

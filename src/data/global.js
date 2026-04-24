@@ -22,17 +22,27 @@ export const FOOTER_CONTENT = {
     ],
   },
   copyright: "© {year} BERI AGENCY. All rights reserved.",
-  address: "Addis Ababa, Ethiopia",
-  email: "barjalobalhire@gmail.com",
+  address: "Addis Ababa, Ethiopia\nLambert Area",
+  email: "beriglobalhire@gmail.com",
+  phone: "+251 904 416 563\n+251 910 005 518",
 };
 
 export const NAVBAR_CONTENT = {
   logo: "BERI AGENCY",
   links: [
-    { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
-    { label: "Clients", href: "/clients" },
+    { label: "Services", href: "/services" },
+    // { label: "Clients", href: "/clients" },
     { label: "Portfolio", href: "/portfolio" },
+    { label: "Certificates", href: "/certificates" },
   ],
-  cta: "Get a Quote",
+  // cta: "Get a Quote",
 };
+
+export const SOCIAL_LINKS = [
+  { platform: "Facebook", href: "#" },
+  { platform: "Twitter", href: "#" },
+  { platform: "Instagram", href: "#" },
+  { platform: "Linkedin", href: "#" },
+  { platform: "Youtube", href: "#" },
+];

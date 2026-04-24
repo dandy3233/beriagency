@@ -1,12 +1,23 @@
 import { CLIENTS_HERO, CLIENTS_HEADER } from "@/data/partners";
 import { CTABand } from "@/components/site/cta-band";
 import { PartnerStaggeredGrid } from "@/components/site/partner-grid";
+import heroImg from "@/assets/hero-home.jpg";
 
 export const ClientsPage = () => {
   return (
     <>
-      <section className="gradient-brand text-white">
-        <div className="container-px mx-auto max-w-7xl py-20 md:py-28 text-center md:text-left">
+      <section className="relative overflow-hidden bg-primary-deep text-white">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroImg}
+            alt="Clients"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary-deep/80 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep via-primary-deep/60 to-transparent" />
+        </div>
+
+        <div className="container-px relative z-10 mx-auto max-w-7xl py-20 md:py-28 text-center md:text-left">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             {CLIENTS_HERO.eyebrow}
           </p>

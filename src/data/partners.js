@@ -4,18 +4,18 @@ import molad from "../assets/partners/image.png";
 
 export const PARTNERS = [
   { name: "Ethiopian Airlines", image: molad },
-  { name: "Kenya Airways", image: etv },
-  { name: "United Nations", image: etv },
-  { name: "African Union", image: etv },
-  { name: "World Bank", image: etv },
-  { name: "Red Cross", image: etv },
-  { name: "USAID", image: etv },
-  { name: "Qatar Airways", image: etv },
-  { name: "Emirates", image: etv },
-  { name: "Turkish Airlines", image: etv },
-  { name: "Lufthansa", image: etv },
-  { name: "Fly Dubai", image: etv },
-  { name: "South African Airways", image: etv },
+  // { name: "Kenya Airways", image: etv },
+  // { name: "United Nations", image: etv },
+  // { name: "African Union", image: etv },
+  // { name: "World Bank", image: etv },
+  // { name: "Red Cross", image: etv },
+  // { name: "USAID", image: etv },
+  // { name: "Qatar Airways", image: etv },
+  // { name: "Emirates", image: etv },
+  // { name: "Turkish Airlines", image: etv },
+  // { name: "Lufthansa", image: etv },
+  // { name: "Fly Dubai", image: etv },
+  // { name: "South African Airways", image: etv },
 ];
 
 export const CLIENTS_HERO = {

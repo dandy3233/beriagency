@@ -38,7 +38,7 @@ export function Home() {
   return (
     <>
       {/* Hero with Slider */}
-      <section className="relative isolate overflow-hidden min-h-[650px] flex items-center">
+      <section className="relative isolate overflow-hidden lg:py-10 flex items-center justify-start">
         <div className="absolute inset-0 -z-10">
           {HERO_SLIDES.map((slide, index) => (
             <div
@@ -62,15 +62,15 @@ export function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/95 via-primary-deep/40 to-transparent" />
         </div>
 
-        <div className="container-px mx-auto max-w-7xl py-20 md:py-32 lg:py-10">
+        <div className="container-px mx-5 max-w-7xl pt-40 pb-20 md:pt-48 md:pb-32 lg:pt-48 lg:pb-32">
           <div
             key={currentSlide} // Key change triggers CSS animation
             className="max-w-3xl relative z-10 text-left animate-in fade-in slide-in-from-left-8 duration-1000 ease-out"
           >
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            {/* <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               {HERO_SLIDES[currentSlide].eyebrow}
-            </p>
+            </p> */}
 
             <h1 className="font-display text-4xl font-bold leading-[1.1] text-white text-balance md:text-6xl lg:text-7xl">
               {HERO_SLIDES[currentSlide].title.split("Africa & Beyond")[0]}
@@ -81,7 +81,7 @@ export function Home() {
               {HERO_SLIDES[currentSlide].description}
             </p>
 
-            <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row relative z-20">
+            {/* <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row relative z-20">
               <Button
                 asChild
                 size="lg"
@@ -101,7 +101,7 @@ export function Home() {
                   Learn About Us
                 </Link>
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {/* Slider Indicators */}

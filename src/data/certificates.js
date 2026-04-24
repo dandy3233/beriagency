@@ -1,4 +1,8 @@
 import { Award, ShieldCheck, FileBadge, Globe2 } from "lucide-react";
+import p1 from "@/assets/portfolio/project-1.png";
+import p2 from "@/assets/portfolio/project-2.png";
+import p3 from "@/assets/portfolio/project-3.png";
+import p4 from "@/assets/portfolio/project-abudhabi.png";
 
 export const CERTS_HERO = {
   eyebrow: "Certificates & Compliance",
@@ -21,21 +25,25 @@ export const CERTS_HEADER = {
 export const CERTS = [
   {
     icon: Award,
+    image: p1,
     title: "Licensed Travel Agency",
     body: "Operating under a valid travel agency license issued by the relevant national authority.",
   },
   {
     icon: FileBadge,
+    image: p2,
     title: "IATA / Travel Accreditation",
     body: "Working through IATA-accredited partners for global ticketing and fulfillment.",
   },
   {
     icon: ShieldCheck,
+    image: p3,
     title: "Government Registration",
     body: "Fully registered with all required Ethiopian government bodies and tax authorities.",
   },
   {
     icon: Globe2,
+    image: p4,
     title: "International Standards",
     body: "Aligned with international best practices for safety, data handling and duty-of-care.",
   },

@@ -2,12 +2,23 @@ import { Quote, Star } from "lucide-react";
 import { SectionHeader } from "@/components/site/section-header";
 import { CTABand } from "@/components/site/cta-band";
 import { TESTIMONIALS, TESTIMONIALS_HERO, TESTIMONIALS_HEADER } from "@/data/testimonials";
+import testimonialImg from "@/assets/services.jpg";
 
 export function TestimonialsPage() {
   return (
     <>
-      <section className="gradient-brand text-white">
-        <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
+      <section className="relative overflow-hidden bg-primary-deep text-white">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={testimonialImg}
+            alt="Testimonials"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary-deep/80 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep via-primary-deep/60 to-transparent" />
+        </div>
+
+        <div className="container-px relative z-10 mx-auto max-w-7xl py-20 md:py-28">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             {TESTIMONIALS_HERO.eyebrow}
           </p>

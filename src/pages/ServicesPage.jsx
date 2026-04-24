@@ -1,21 +1,27 @@
+import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { SectionHeader } from "@/components/site/section-header";
 import { CTABand } from "@/components/site/cta-band";
 import servicesImg from "@/assets/services.jpg";
 import { SERVICES, STEPS, SERVICES_HERO, PROCESS_CONTENT } from "@/data/services";
+import Pagination from "@/components/site/pagination";
 
 export function ServicesPage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginatedServices, setPaginatedServices] = useState([]);
+  const itemsPerPage = 6;
+
   return (
     <>
-      <section className="relative overflow-hidden py-24 text-white lg:py-32">
+      <section className="relative overflow-hidden pt-40 pb-24 text-white md:pt-48 lg:pt-52 lg:pb-32">
         <div className="absolute inset-0 z-0">
           <img
             src={servicesImg}
             alt="Services"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover transition-transform duration-[10s] hover:scale-110"
           />
-          <div className="absolute inset-0 bg-primary-deep/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep via-primary-deep/60 to-transparent" />
+          <div className="absolute inset-0 bg-primary-deep/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/80 via-primary-deep/40 to-transparent" />
         </div>
         
         <div className="container-px relative z-10 mx-auto max-w-7xl">
@@ -33,7 +39,7 @@ export function ServicesPage() {
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map(({ icon: Icon, title, desc, items }) => (
+          {paginatedServices.map(({ icon: Icon, title, desc, items }) => (
             <div
               key={title}
               className="group flex flex-col rounded-2xl border border-border bg-card p-7 shadow-soft transition-all hover:-translate-y-1 hover:shadow-elegant"
@@ -54,6 +60,14 @@ export function ServicesPage() {
             </div>
           ))}
         </div>
+
+        <Pagination
+          items={SERVICES}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          onPageChange={setCurrentPage}
+          onDataUpdate={setPaginatedServices}
+        />
       </section>
 
       {/* Process */}

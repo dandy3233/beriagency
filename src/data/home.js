@@ -1,4 +1,4 @@
-import hero1 from "@/assets/home/project-1.png";
+import hero1 from "@/assets/home/12.png";
 import hero2 from "@/assets/home/project-2.png";
 import hero3 from "@/assets/home/project-3.png";
 import hero4 from "@/assets/home/project-abudhabi.png";

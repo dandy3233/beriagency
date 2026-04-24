@@ -72,11 +72,12 @@ export function ContactPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-primary-deep text-white">
-        <div className="absolute inset-0 opacity-25">
-          <img src={contactImg} alt="" className="h-full w-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 gradient-brand opacity-70" />
+        <div className="absolute inset-0 z-0">
+          <img src={contactImg} alt="" className="h-full w-full object-cover transition-transform duration-[10s] hover:scale-110" loading="lazy" />
+          <div className="absolute inset-0 bg-primary-deep/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/80 via-primary-deep/40 to-transparent" />
         </div>
-        <div className="container-px relative mx-auto max-w-7xl py-20 md:py-28">
+        <div className="container-px relative mx-auto max-w-7xl pt-40 pb-20 md:pt-48 md:pb-28 lg:pt-52 lg:pb-32">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             {heroContent.eyebrow}
           </p>
