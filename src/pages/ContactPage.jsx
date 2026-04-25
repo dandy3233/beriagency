@@ -124,7 +124,11 @@ export function ContactPage() {
                   <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     Phone
                   </div>
-                  <span className="font-medium text-foreground">{CONTACT_INFO.phone}</span>
+                  <div className="flex flex-col gap-0.5">
+                    {CONTACT_INFO.phone.map((num) => (
+                      <span key={num} className="font-medium text-foreground">{num}</span>
+                    ))}
+                  </div>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -135,7 +139,11 @@ export function ContactPage() {
                   <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     Office
                   </div>
-                  <span className="font-medium text-foreground">{CONTACT_INFO.office}</span>
+                  <div className="flex flex-col gap-0.5">
+                    {CONTACT_INFO.address.map((line) => (
+                      <span key={line} className="font-medium text-foreground">{line}</span>
+                    ))}
+                  </div>
                 </div>
               </li>
             </ul>

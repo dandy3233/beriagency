@@ -61,15 +61,15 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                 <span className="flex flex-col">
-                  {FOOTER_CONTENT.phone && FOOTER_CONTENT.phone.split('\n').map((line, i) => (
-                    <span key={i}>{line}</span>
+                  {FOOTER_CONTENT.phone?.map((num, i) => (
+                    <span key={i}>{num}</span>
                   ))}
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                 <span className="flex flex-col">
-                  {FOOTER_CONTENT.address.split('\n').map((line, i) => (
+                  {FOOTER_CONTENT.address?.map((line, i) => (
                     <span key={i}>{line}</span>
                   ))}
                 </span>

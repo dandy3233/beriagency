@@ -1,8 +1,9 @@
 import { Award, ShieldCheck, FileBadge, Globe2 } from "lucide-react";
-import p1 from "@/assets/portfolio/project-1.png";
-import p2 from "@/assets/portfolio/project-2.png";
-import p3 from "@/assets/portfolio/project-3.png";
-import p4 from "@/assets/portfolio/project-abudhabi.png";
+// Import placeholders temporarily to fix the build error
+import p1 from "@/assets/certificates/1.png";
+import p2 from "@/assets/certificates/2.png";
+import p3 from "@/assets/certificates/3.png";
+import p4 from "@/assets/certificates/4.png";
 
 export const CERTS_HERO = {
   eyebrow: "Certificates & Compliance",
@@ -17,7 +18,7 @@ export const CERTS_HEADER = {
   footer: {
     text: "Want to see a specific certificate? ",
     linkText: "Email us",
-    linkHref: "mailto:barjalobalhire@gmail.com",
+    linkHref: "mailto:beriglobalhire@gmail.com",
     suffix: " and we'll share a copy.",
   },
 };

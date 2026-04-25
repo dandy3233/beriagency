@@ -1,3 +1,5 @@
+import { CONTACT_DATA } from "./global";
+
 export const CONTACT_HERO = {
   general: {
     eyebrow: "Contact",
@@ -33,9 +35,4 @@ export const SERVICE_OPTIONS = [
   { value: "general", label: "General inquiry" },
 ];
 
-export const CONTACT_INFO = {
-  email: "barjalobalhire@gmail.com",
-  phone: "Available on request",
-  office: "Addis Ababa, Ethiopia",
-  mapsUrl: "https://www.google.com/maps?q=Addis%20Ababa%2C%20Ethiopia&output=embed",
-};
+export const CONTACT_INFO = CONTACT_DATA;

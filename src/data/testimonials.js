@@ -11,33 +11,34 @@ export const TESTIMONIALS_HEADER = {
 
 export const TESTIMONIALS = [
   {
-    quote: "BERI AGENCY made our corporate travel seamless and cost-efficient.",
-    author: "Corporate Client",
-    role: "Multinational, Pan-Africa",
+    quote: "BERI AGENCY has completely transformed how our team travels across the continent. Their attention to detail and proactive support made our complex pan-African mission seamless and incredibly cost-efficient.",
+    author: "Dawit Gebremariam",
+    role: "Passenger",
   },
   {
-    quote: "Reliable, fast, and very professional service.",
-    author: "NGO Partner",
-    role: "International NGO",
+    quote: "Reliable, exceptionally fast, and professional. In the humanitarian sector, timing is everything, and BERI AGENCY has never failed to deliver even in the most challenging environments.",
+    author: "Selamawit Tadesse",
+    role: "Passenger",
   },
   {
-    quote: "Best travel coordination we've experienced in Africa.",
-    author: "International Partner",
-    role: "Global Travel Network",
+    quote: "The best travel coordination we've experienced in over a decade of operating in Africa. Their deep local knowledge and global network give us absolute peace of mind for every trip.",
+    author: "Yohannes Alemu",
+    role: "Passenger",
   },
   {
-    quote: "Their visa and documentation team saved us weeks of paperwork.",
-    author: "Operations Manager",
-    role: "Mining Company",
+    quote: "Their visa and documentation team is world-class. They handled everything with precision and saved our operations weeks of administrative paperwork and potential delays.",
+    author: "Tigist Haile",
+    role: "Passenger",
   },
   {
-    quote: "Always one step ahead — even when itineraries change last minute.",
-    author: "Programs Director",
-    role: "Humanitarian NGO",
+    quote: "Always one step ahead. Even when our flight schedules changed at the very last minute, BERI AGENCY had already arranged alternative routes before we even had to ask.",
+    author: "Elias Kassahun",
+    role: "Passenger",
   },
   {
-    quote: "Transparent pricing and excellent post-trip reporting.",
-    author: "Finance Lead",
-    role: "Tech Group",
+    quote: "Transparent pricing, excellent communication, and detailed post-trip reporting. They aren't just a travel agency; they are a strategic partner for our business growth.",
+    author: "Mulugeta Tesfaye",
+    role: "Passenger",
   },
+
 ];

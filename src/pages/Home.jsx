@@ -13,9 +13,11 @@ import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/site/section-header";
 import { CTABand } from "@/components/site/cta-band";
 import { PartnerStaggeredGrid } from "@/components/site/partner-grid";
+import { TestimonialSlider } from "@/components/site/testimonial-slider";
 import aboutImg from "@/assets/about.jpg";
 import { SERVICES } from "@/data/services";
 import { TESTIMONIALS } from "@/data/testimonials";
+import { CLIENTS_HEADER } from "@/data/partners";
 import {
   HERO_SLIDES,
   HERO_CONTENT,
@@ -227,11 +229,12 @@ export function Home() {
       {/* Partners staggered grid */}
       <section className="bg-white overflow-hidden py-24 border-y border-border">
         <div className="container-px mx-auto max-w-7xl">
-          <div className="mb-14 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-3">
-              Trusted Network
-            </p>
-          </div>
+          <SectionHeader
+            align="center"
+            eyebrow={CLIENTS_HEADER.eyebrow}
+            title={CLIENTS_HEADER.title}
+            description={CLIENTS_HEADER.description}
+          />
 
           <PartnerStaggeredGrid />
         </div>
@@ -245,25 +248,7 @@ export function Home() {
           title={TESTIMONIALS_PREVIEW.title}
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {TESTIMONIALS.slice(0, 3).map((t) => (
-            <figure
-              key={t.author}
-              className="relative rounded-xl border border-border bg-card p-8 shadow-soft"
-            >
-              <Quote className="absolute right-6 top-6 h-8 w-8 text-accent/40" />
-              <blockquote className="font-display text-lg italic leading-relaxed text-foreground">
-                "{t.quote}"
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <MapPin className="h-4 w-4" />
-                </span>
-                <span className="text-sm font-semibold text-primary-deep">{t.author}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <TestimonialSlider />
       </section>
 
       <CTABand />

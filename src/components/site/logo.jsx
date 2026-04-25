@@ -12,8 +12,7 @@ export function Logo({ variant = "default", className }) {
     >
       <span
         className={cn(
-          "flex h-10 w-10 md:h-14 md:w-14 items-center justify-center rounded-lg",
-          isLight ? "bg-accent text-primary-deep" : "gradient-brand text-accent",
+          "flex h-10 w-10 md:h-14 md:w-14 items-center justify-center rounded-lg gradient-brand text-accent"
         )}
       >
         {/* <Plane className="h-6 w-6 -rotate-45" strokeWidth={2.5} /> */}

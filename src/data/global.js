@@ -6,6 +6,14 @@ export const CTA_BAND_CONTENT = {
   ctaSecondary: "Partner With Us",
 };
 
+export const CONTACT_DATA = {
+  email: "beriglobalhire@gmail.com",
+  phone: ["+251 904 416 563", "+251 910 005 518"],
+  address: ["Addis Ababa, Ethiopia", "Lambert Area"],
+  office: "Addis Ababa, Ethiopia",
+  mapsUrl: "https://www.google.com/maps?q=Addis%20Ababa%2C%20Ethiopia&output=embed",
+};
+
 export const FOOTER_CONTENT = {
   description: "A modern travel management company focused on delivering efficient, transparent, and cost-effective travel solutions across Africa and international markets.",
   links: {
@@ -22,9 +30,7 @@ export const FOOTER_CONTENT = {
     ],
   },
   copyright: "© {year} BERI AGENCY. All rights reserved.",
-  address: "Addis Ababa, Ethiopia\nLambert Area",
-  email: "beriglobalhire@gmail.com",
-  phone: "+251 904 416 563\n+251 910 005 518",
+  ...CONTACT_DATA, // Use shared contact data
 };
 
 export const NAVBAR_CONTENT = {
@@ -46,3 +52,5 @@ export const SOCIAL_LINKS = [
   { platform: "Linkedin", href: "#" },
   { platform: "Youtube", href: "#" },
 ];
+
+
