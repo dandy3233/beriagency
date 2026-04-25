@@ -8,56 +8,56 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root";
-import { Route as TestimonialsRouteImport } from "./routes/testimonials";
-import { Route as ServicesRouteImport } from "./routes/services";
-import { Route as PortfolioRouteImport } from "./routes/portfolio";
-import { Route as ContactRouteImport } from "./routes/contact";
-import { Route as ClientsRouteImport } from "./routes/clients";
-import { Route as CertificatesRouteImport } from "./routes/certificates";
-import { Route as AboutRouteImport } from "./routes/about";
-import { Route as IndexRouteImport } from "./routes/index";
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ClientsRouteImport } from './routes/clients'
+import { Route as CertificatesRouteImport } from './routes/certificates'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as IndexRouteImport } from './routes/index'
 
 const TestimonialsRoute = TestimonialsRouteImport.update({
-  id: "/testimonials",
-  path: "/testimonials",
+  id: '/testimonials',
+  path: '/testimonials',
   getParentRoute: () => rootRouteImport,
-});
+})
 const ServicesRoute = ServicesRouteImport.update({
-  id: "/services",
-  path: "/services",
+  id: '/services',
+  path: '/services',
   getParentRoute: () => rootRouteImport,
-});
+})
 const PortfolioRoute = PortfolioRouteImport.update({
-  id: "/portfolio",
-  path: "/portfolio",
+  id: '/portfolio',
+  path: '/portfolio',
   getParentRoute: () => rootRouteImport,
-});
+})
 const ContactRoute = ContactRouteImport.update({
-  id: "/contact",
-  path: "/contact",
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
-});
+})
 const ClientsRoute = ClientsRouteImport.update({
-  id: "/clients",
-  path: "/clients",
+  id: '/clients',
+  path: '/clients',
   getParentRoute: () => rootRouteImport,
-});
+})
 const CertificatesRoute = CertificatesRouteImport.update({
-  id: "/certificates",
-  path: "/certificates",
+  id: '/certificates',
+  path: '/certificates',
   getParentRoute: () => rootRouteImport,
-});
+})
 const AboutRoute = AboutRouteImport.update({
-  id: "/about",
-  path: "/about",
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
-});
+})
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
-});
+})
 
 const rootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -68,5 +68,5 @@ const rootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   ServicesRoute: ServicesRoute,
   TestimonialsRoute: TestimonialsRoute,
-};
-export const routeTree = rootRouteImport._addFileChildren(rootRouteChildren)._addFileTypes();
+}
+export const routeTree = rootRouteImport._addFileChildren(rootRouteChildren)

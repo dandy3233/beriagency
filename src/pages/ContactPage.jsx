@@ -55,7 +55,7 @@ export function ContactPage() {
 
     setSubmitting(true);
     try {
-      await submitContact({ data: parsed.data });
+      await submitContact(parsed.data);
       toast.success("Message sent — we'll get back to you within one business day.");
       setName("");
       setEmail("");

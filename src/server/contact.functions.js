@@ -1,4 +1,3 @@
-import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
 export const contactSchema = z.object({
@@ -15,11 +14,12 @@ export const contactSchema = z.object({
   message: z.string().trim().min(10, "Tell us a bit more (min 10 chars)").max(2000),
 });
 
-export const submitContact = createServerFn({ method: "POST" })
-  .inputValidator((input) => contactSchema.parse(input))
-  .handler(async ({ data }) => {
-    console.log("Contact submission received (Supabase removed):", data);
-    
-    // Simulate successful processing
-    return { success: true };
-  });
+export const submitContact = async (data) => {
+  // Validate input
+  contactSchema.parse(data);
+  
+  console.log("Contact submission received (Client-side simulation):", data);
+  
+  // Simulate successful processing
+  return { success: true };
+};
