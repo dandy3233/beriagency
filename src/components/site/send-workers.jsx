@@ -2,11 +2,21 @@ import React from 'react';
 import { WORKER_DESTINATIONS, DESTINATIONS_CONTENT } from '@/data/send-workers';
 import { SectionHeader } from '@/components/site/section-header';
 
-function DestCard({ dest }) {
+function DestCard({ dest, index }) {
   return (
-    <div className="flex items-center gap-3 rounded-full border border-border bg-card px-5 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-primary/30 whitespace-nowrap">
-      <span className="text-2xl" role="img" aria-label={dest.ariaLabel}>{dest.flag}</span>
-      <span className="font-medium text-foreground text-sm">{dest.country}</span>
+    <div 
+      className="group flex items-center gap-4 rounded-full border border-border bg-card px-6 py-4 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:border-primary/40 whitespace-nowrap"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <span 
+        className="text-4xl animate-float transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:filter group-hover:drop-shadow-md" 
+        role="img" 
+        aria-label={dest.ariaLabel}
+        style={{ animationDelay: `${index * 0.2}s` }}
+      >
+        {dest.flag}
+      </span>
+      <span className="font-bold text-foreground text-base tracking-tight">{dest.country}</span>
     </div>
   );
 }
@@ -29,8 +39,8 @@ export function SendWorkers({ className }) {
 
       {/* MOBILE & TABLET: Centered flex-wrap */}
       <div className="flex flex-wrap justify-center gap-3 lg:hidden">
-        {WORKER_DESTINATIONS.map((dest) => (
-          <DestCard key={dest.country} dest={dest} />
+        {WORKER_DESTINATIONS.map((dest, i) => (
+          <DestCard key={dest.country} dest={dest} index={i} />
         ))}
       </div>
 
@@ -38,15 +48,15 @@ export function SendWorkers({ className }) {
       <div className="hidden lg:flex flex-col items-center gap-4 w-full">
         {/* Row 1: 4 Cards */}
         <div className="flex justify-center gap-4 w-full">
-          {row1.map((dest) => <DestCard key={dest.country} dest={dest} />)}
+          {row1.map((dest, i) => <DestCard key={dest.country} dest={dest} index={i} />)}
         </div>
         {/* Row 2: 5 Cards */}
         <div className="flex justify-center gap-4 w-full">
-          {row2.map((dest) => <DestCard key={dest.country} dest={dest} />)}
+          {row2.map((dest, i) => <DestCard key={dest.country} dest={dest} index={i + 4} />)}
         </div>
         {/* Row 3: 4 Cards */}
         <div className="flex justify-center gap-4 w-full">
-          {row3.map((dest) => <DestCard key={dest.country} dest={dest} />)}
+          {row3.map((dest, i) => <DestCard key={dest.country} dest={dest} index={i + 9} />)}
         </div>
       </div>
     </div>
