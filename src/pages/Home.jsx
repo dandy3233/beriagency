@@ -22,10 +22,10 @@ import {
   HERO_SLIDES,
   HERO_CONTENT,
   STATS,
-  ABOUT_PREVIEW,
   SERVICES_PREVIEW,
   TESTIMONIALS_PREVIEW,
 } from "@/data/home";
+import { ABOUT_PREVIEW } from "@/data/about";
 
 export function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -65,22 +65,13 @@ export function Home() {
         </div>
 
         <div className="container-px mx-5 max-w-7xl pt-40 pb-20 md:pt-48 md:pb-32 lg:pt-48 lg:pb-32">
-          <div
-            key={currentSlide} // Key change triggers CSS animation
-            className="max-w-3xl relative z-10 text-left animate-in fade-in slide-in-from-left-8 duration-1000 ease-out"
-          >
-            {/* <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              {HERO_SLIDES[currentSlide].eyebrow}
-            </p> */}
-
+          <div className="max-w-3xl relative z-10 text-left">
             <h1 className="font-display text-4xl font-bold leading-[1.1] text-white text-balance md:text-6xl lg:text-7xl">
-              {HERO_SLIDES[currentSlide].title.split("Africa & Beyond")[0]}
-              <span className="text-accent">Africa & Beyond</span>
+              {HERO_CONTENT.title}
             </h1>
 
             <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl leading-relaxed">
-              {HERO_SLIDES[currentSlide].description}
+              {HERO_CONTENT.description}
             </p>
 
             {/* <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row relative z-20">

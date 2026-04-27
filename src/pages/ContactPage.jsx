@@ -78,7 +78,7 @@ export function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/80 via-primary-deep/40 to-transparent" />
         </div>
         <div className="container-px relative mx-auto max-w-7xl pt-40 pb-20 md:pt-48 md:pb-28 lg:pt-52 lg:pb-32">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.3em] text-accent backdrop-blur-md">
             {heroContent.eyebrow}
           </p>
           <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight text-balance md:text-6xl">

@@ -1,7 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { FaWhatsapp, FaTelegramPlane, FaTiktok } from "react-icons/fa";
 import { Logo } from "./logo";
-import { FOOTER_CONTENT } from "@/data/global";
+import { FOOTER_CONTENT, SOCIAL_LINKS } from "@/data/global";
+
+const SOCIAL_ICONS = {
+  WhatsApp: FaWhatsapp,
+  Telegram: FaTelegramPlane,
+  TikTok: FaTiktok,
+};
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,11 +17,32 @@ export function Footer() {
     <footer className="bg-primary-deep text-white">
       <div className="container-px mx-auto max-w-7xl py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          <div className="space-y-4">
-            <Logo variant="light" />
-            <p className="max-w-xs text-sm text-white/70">
-              {FOOTER_CONTENT.description}
-            </p>
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <Logo variant="light" />
+              <p className="max-w-xs text-sm text-white/70">
+                {FOOTER_CONTENT.description}
+              </p>
+            </div>
+
+            <div className="flex gap-4">
+              {SOCIAL_LINKS.map((social) => {
+                const Icon = SOCIAL_ICONS[social.platform];
+                if (!Icon) return null;
+                return (
+                  <a
+                    key={social.platform}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-accent hover:text-primary-deep"
+                    aria-label={social.platform}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           <div>
@@ -80,7 +108,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/60 md:flex-row md:items-center">
           <p>{FOOTER_CONTENT.copyright.replace("{year}", currentYear)}</p>
-          <p className="font-display tracking-wide text-accent">Connecting Africa to the World</p>
+          {/* <p className="font-display tracking-wide text-accent">Connecting Africa to the World</p> */}
         </div>
       </div>
     </footer>

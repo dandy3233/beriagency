@@ -6,6 +6,7 @@ import { SectionHeader } from "@/components/site/section-header";
 // import aboutImg from "@/assets/about.jpg";
 import aboutImg from "@/assets/12.png";
 import { VALUES, ABOUT_CARDS, ABOUT_HERO, VALUES_CONTENT, ABOUT_STATS, ABOUT_CTA, TEAM } from "@/data/about";
+import { SendWorkers } from "@/components/site/send-workers";
 
 export function AboutPage() {
   return (
@@ -25,13 +26,12 @@ export function AboutPage() {
         <div className="container-px relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center pt-40 pb-20 md:pt-48 md:pb-28 lg:pt-58 lg:pb-32">
           <div className="max-w-4xl">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.3em] text-accent backdrop-blur-md">
-              {/* <Sparkles className="h-3 w-3" /> */}
               {ABOUT_HERO.eyebrow}
             </p>
-            <h1 className="font-display text-5xl font-bold leading-tight text-white text-balance md:text-7xl lg:text-7xl">
+            {/* <h1 className="font-display text-5xl font-bold leading-tight text-white text-balance md:text-7xl lg:text-7xl">
               {ABOUT_HERO.title} <br />
               <span className="text-accent underline decoration-white/20 underline-offset-8 italic font-light">{ABOUT_HERO.subtitle}</span>
-            </h1>
+            </h1> */}
             <p className="mt-8 max-w-2xl text-lg text-white/90 md:text-lg leading-relaxed">
               {ABOUT_HERO.description}
             </p>
@@ -58,7 +58,10 @@ export function AboutPage() {
                       <card.icon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h4 className="font-display text-lg font-bold text-primary-deep">{card.title}</h4>
+                      {card.eyebrow && (
+                        <p className="mb-1 text-xs font-bold uppercase tracking-widest text-accent">{card.eyebrow}</p>
+                      )}
+                      {/* <h4 className="font-display text-lg font-bold text-primary-deep">{card.title}</h4> */}
                       <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{card.body}</p>
                     </div>
                   </div>
@@ -146,6 +149,11 @@ export function AboutPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Where We Send Workers */}
+      <section className="container-px mx-auto max-w-7xl pb-24 md:pb-32">
+        <SendWorkers className="" />
       </section>
     </>
   );

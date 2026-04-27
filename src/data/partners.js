@@ -8,54 +8,35 @@ export const PARTNERS = [
 
 export const CLIENTS_HERO = {
   eyebrow: "Clients & Partners",
-  title: "Trusted by organizations across Africa and the world.",
-  description: "We work alongside leading airlines, NGOs, governments and corporations to keep their people moving — safely and efficiently.",
+  title: "Trusted by employers across the Gulf and the world.",
+  description: "We work alongside leading companies, governments and international organizations to connect people to opportunities — safely and efficiently.",
 };
 
 export const CLIENTS_HEADER = {
   eyebrow: "Our network",
   title: "Our Trusted Partners",
-  description: "Logos shown are representative — real partner logos can be added on request.",
+  description: "Collaborating with authorized labor ministries and leading employers in the Middle East.",
 };
 
 export const GROUPS = [
   {
-    icon: Plane,
-    title: "Airlines",
+    icon: Building2,
+    title: "International Employers",
     items: [
-      "Ethiopian Airlines",
-      "Kenya Airways",
-      "EgyptAir",
-      "Qatar Airways",
-      "Turkish Airlines",
-      "Emirates",
+      "Hospitality Groups",
+      "Construction Firms",
+      "Healthcare Providers",
+      "Service Industry Partners",
     ],
-  },
-  {
-    icon: HeartHandshake,
-    title: "NGOs & International Organizations",
-    items: ["UN Mission", "Red Cross", "USAID", "Save the Children", "WFP", "Oxfam"],
   },
   {
     icon: Landmark,
     title: "Government Institutions",
-    items: ["Federal Ministries", "Regional Bureaus", "Diplomatic Missions", "Public Agencies"],
+    items: ["Ministry of Labor", "Embassies", "Regional Bureaus", "Immigration Authorities"],
   },
   {
-    icon: Building2,
-    title: "Private Corporations",
-    items: [
-      "Tech Group",
-      "Manufacturing Co.",
-      "Mining Inc.",
-      "Consulting Ltd.",
-      "FMCG Brand",
-      "Energy Co.",
-    ],
-  },
-  {
-    icon: Briefcase,
-    title: "Travel Agencies & Global Partners",
-    items: ["Global DMC Network", "Partner Agency A", "Partner Agency B", "Online Travel Co."],
+    icon: HeartHandshake,
+    title: "Support Organizations",
+    items: ["Training Centers", "Health Screening Clinics", "Worker Welfare NGOs"],
   },
 ];

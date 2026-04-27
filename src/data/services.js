@@ -2,8 +2,8 @@ import { Plane, Globe2, Briefcase, Handshake, FileCheck, ShieldCheck, MessageSqu
 
 export const SERVICES_HERO = {
   eyebrow: "Our services",
-  title: "Five core services. One reliable partner.",
-  description: "Whether you need a single visa or a full corporate travel program, BERI AGENCY brings the expertise, technology and care to make it effortless.",
+  title: "Professional Recruitment Solutions.",
+  description: "BERI AGENCY provides comprehensive sourcing, training, and deployment services to connect Ethiopian talent with leading employers across the Gulf region.",
 };
 
 export const SERVICES = [
@@ -20,80 +20,74 @@ export const SERVICES = [
   },
   {
     icon: Globe2,
-    title: "Tours & Logistics",
-    desc: "Seamless tour design and on-the-ground coordination.",
+    title: "Training & Orientation",
+    desc: "Preparing workers for success in their new international environments.",
     items: [
-      "Customized tour packages",
-      "Group travel coordination",
-      "Local transportation arrangements",
-      "Local guides & permits",
-    ],
-  },
-  {
-    icon: Briefcase,
-    title: "Corporate Solutions",
-    desc: "Programs that turn travel spend into measurable value.",
-    items: [
-      "Business travel management",
-      "Expense optimization",
-      "Reporting & analytics",
-      "Preferred-rate negotiation",
-    ],
-  },
-  {
-    icon: Handshake,
-    title: "Partnership Services",
-    desc: "Strategic relationships across Africa and beyond.",
-    items: [
-      "Airline partnerships",
-      "NGO travel support",
-      "Global travel coordination",
-      "Mission & event logistics",
+      "Cultural orientation",
+      "Basic language training",
+      "Workplace ethics & safety",
+      "Skills assessment",
     ],
   },
   {
     icon: FileCheck,
-    title: "Visa & Documentation",
-    desc: "Paperwork done right — so you fly without friction.",
-    items: ["Visa assistance", "Travel insurance", "Documentation compliance", "Embassy liaison"],
+    title: "Visa & Legal Processing",
+    desc: "Handling all legal paperwork for safe and compliant overseas employment.",
+    items: [
+      "Visa application processing",
+      "Contract documentation",
+      "Embassy liaison",
+      "Labor ministry clearance",
+    ],
+  },
+  {
+    icon: Rocket,
+    title: "Worker Deployment",
+    desc: "Efficient and organized travel arrangements for all deployed personnel.",
+    items: [
+      "Flight booking & ticketing",
+      "Pre-departure briefing",
+      "Airport assistance",
+      "Arrival coordination",
+    ],
   },
   {
     icon: ShieldCheck,
-    title: "Compliance & Care",
-    desc: "Standards, safety, and dedicated support at every step.",
+    title: "Worker Welfare",
+    desc: "Dedicated support to ensure the safety and well-being of our workers abroad.",
     items: [
-      "Industry accreditation",
-      "Risk & duty-of-care",
-      "Sustainable travel options",
-      "Dedicated account manager",
+      "Regular welfare checks",
+      "Legal support coordination",
+      "Employer-employee mediation",
+      "Emergency assistance",
     ],
   },
 ];
 
 export const PROCESS_CONTENT = {
   eyebrow: "How we work",
-  title: "A simple, four-step path to a great trip.",
+  title: "Our simplified recruitment process.",
 };
 
 export const STEPS = [
   {
     icon: MessageSquare,
-    title: "Discovery",
-    desc: "We learn your goals, policies, and constraints.",
+    title: "Sourcing & Screening",
+    desc: "We identify and rigorously screen candidates to find the best match.",
   },
   {
     icon: ClipboardList,
-    title: "Plan & Quote",
-    desc: "Tailored itinerary with transparent pricing.",
+    title: "Training & Orientation",
+    desc: "Workers undergo thorough preparation for their specific roles.",
   },
   {
     icon: Rocket,
-    title: "Book & Travel",
-    desc: "We handle bookings, docs, and on-trip support.",
+    title: "Visa & Deployment",
+    desc: "We handle all legalities and organize safe travel to the destination.",
   },
   {
     icon: CheckCircle2,
-    title: "Review & Optimize",
-    desc: "Reporting and ideas to save next time.",
+    title: "Post-Placement Support",
+    desc: "We ensure worker welfare and employer satisfaction after deployment.",
   },
 ];

@@ -1,44 +1,43 @@
 export const TESTIMONIALS_HERO = {
   eyebrow: "Testimonials",
-  title: "Trust, in our clients' own words.",
-  description: "Honest feedback from the people we've helped move across Africa and around the world.",
+  title: "Trust, in our partners' own words.",
+  description: "Honest feedback from the employers we've served and the workers we've deployed across the Gulf region.",
 };
 
 export const TESTIMONIALS_HEADER = {
-  eyebrow: "What clients say",
-  title: "Stories of seamless travel.",
+  eyebrow: "What partners say",
+  title: "Stories of successful placement.",
 };
 
 export const TESTIMONIALS = [
   {
-    quote: "BERI AGENCY has completely transformed how our team travels across the continent. Their attention to detail and proactive support made our complex pan-African mission seamless and incredibly cost-efficient.",
-    author: "Dawit Gebremariam",
-    role: "Passenger",
+    quote: "BERI AGENCY has completely transformed how we source talent from Ethiopia. Their attention to detail and proactive support made our recruitment drive for the new Dubai hotel seamless and incredibly efficient.",
+    author: "Ahmed Al-Maktoum",
+    role: "Employer",
   },
   {
-    quote: "Reliable, exceptionally fast, and professional. In the humanitarian sector, timing is everything, and BERI AGENCY has never failed to deliver even in the most challenging environments.",
-    author: "Selamawit Tadesse",
-    role: "Passenger",
+    quote: "Reliable, exceptionally fast, and professional. In the hospitality sector, quality of staff is everything, and BERI AGENCY has never failed to deliver well-trained and prepared personnel.",
+    author: "Sarah Jenkins",
+    role: "HR Manager",
   },
   {
-    quote: "The best travel coordination we've experienced in over a decade of operating in Africa. Their deep local knowledge and global network give us absolute peace of mind for every trip.",
+    quote: "The best recruitment coordination we've experienced in over a decade of operating in the Middle East. Their deep local knowledge in Ethiopia and global network give us absolute peace of mind.",
     author: "Yohannes Alemu",
-    role: "Passenger",
+    role: "International Partner",
   },
   {
-    quote: "Their visa and documentation team is world-class. They handled everything with precision and saved our operations weeks of administrative paperwork and potential delays.",
+    quote: "Their visa and documentation team is world-class. They handled everything with precision and saved our operations weeks of administrative paperwork and potential deployment delays.",
     author: "Tigist Haile",
-    role: "Passenger",
+    role: "Employer",
   },
   {
-    quote: "Always one step ahead. Even when our flight schedules changed at the very last minute, BERI AGENCY had already arranged alternative routes before we even had to ask.",
+    quote: "Thanks to BERI AGENCY, I found a safe and legal way to work in Qatar. Their pre-departure training and support made my transition to a new country much easier than I expected.",
     author: "Elias Kassahun",
-    role: "Passenger",
+    role: "Deployed Worker",
   },
   {
-    quote: "Transparent pricing, excellent communication, and detailed post-trip reporting. They aren't just a travel agency; they are a strategic partner for our business growth.",
+    quote: "Transparent pricing, excellent communication, and detailed reporting. They aren't just a recruitment agency; they are a strategic partner for our business growth.",
     author: "Mulugeta Tesfaye",
-    role: "Passenger",
+    role: "Employer",
   },
-
 ];

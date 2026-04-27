@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
-import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 import { NAVBAR_CONTENT, FOOTER_CONTENT, SOCIAL_LINKS } from "@/data/global";
 
 const SOCIAL_ICONS = {
-  Facebook: Facebook,
-  Twitter: Twitter,
-  Instagram: Instagram,
-  Linkedin: Linkedin,
-  Youtube: Youtube,
+  WhatsApp: FaWhatsapp,
+  Telegram: FaTelegramPlane,
+  TikTok: FaTiktok,
 };
 
 export function Navbar() {

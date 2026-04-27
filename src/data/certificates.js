@@ -8,7 +8,7 @@ import p4 from "@/assets/certificates/4.png";
 export const CERTS_HERO = {
   eyebrow: "Certificates & Compliance",
   title: "Credentials you can rely on.",
-  description: "We hold the licenses and follow the standards required to handle travel for governments, NGOs and corporations.",
+  description: "We hold the licenses and follow the legal standards required to handle international recruitment for employers and governments.",
 };
 
 export const CERTS_HEADER = {
@@ -27,25 +27,25 @@ export const CERTS = [
   {
     icon: Award,
     image: p1,
-    title: "Licensed Travel Agency",
-    body: "Operating under a valid travel agency license issued by the relevant national authority.",
+    title: "Licensed Recruitment Agency",
+    body: "Operating under a valid manpower recruitment license issued by the Ethiopian Ministry of Labor and Skills.",
   },
   {
     icon: FileBadge,
     image: p2,
-    title: "IATA / Travel Accreditation",
-    body: "Working through IATA-accredited partners for global ticketing and fulfillment.",
+    title: "International Labor Compliance",
+    body: "Adhering to international labor standards and ethical recruitment practices for global placement.",
   },
   {
     icon: ShieldCheck,
     image: p3,
     title: "Government Registration",
-    body: "Fully registered with all required Ethiopian government bodies and tax authorities.",
+    body: "Fully registered with all required Ethiopian government bodies, tax authorities, and business bureaus.",
   },
   {
     icon: Globe2,
     image: p4,
-    title: "International Standards",
-    body: "Aligned with international best practices for safety, data handling and duty-of-care.",
+    title: "Gulf-Standard Certification",
+    body: "Aligned with Gulf-specific requirements for worker deployment, health screening, and legal documentation.",
   },
 ];

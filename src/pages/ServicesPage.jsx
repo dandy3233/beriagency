@@ -23,9 +23,9 @@ export function ServicesPage() {
           <div className="absolute inset-0 bg-primary-deep/60 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/80 via-primary-deep/40 to-transparent" />
         </div>
-        
+
         <div className="container-px relative z-10 mx-auto max-w-7xl">
-          <p className="mb-4 inline-block rounded-full bg-accent/20 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-accent backdrop-blur-sm">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.3em] text-accent backdrop-blur-md">
             {SERVICES_HERO.eyebrow}
           </p>
           <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight text-balance md:text-6xl">
