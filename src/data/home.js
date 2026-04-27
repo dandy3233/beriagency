@@ -50,10 +50,10 @@ export const HERO_CONTENT = {
 };
 
 export const STATS = [
-  { value: "2+", label: "Years of expertise" },
-  { value: "1000+", label: "Workers deployed" },
-  { value: "13+", label: "Gulf destinations" },
-  { value: "100%", label: "Legal compliance" },
+  { value: "1+", label: "Years of expertise" },
+  { value: "100+", label: "Workers deployed" },
+  { value: "3+", label: "Gulf destinations" },
+  { value: "98%", label: "Legal compliance" },
 ];
 
 export const SERVICES_PREVIEW = {
