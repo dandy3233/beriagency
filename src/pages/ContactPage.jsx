@@ -24,10 +24,7 @@ export function ContactPage() {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [serviceType, setServiceType] = useState(isPartner ? "partnership" : "general");
-  const [message, setMessage] = useState(
-    isPartner ? "I'd like to explore a partnership with BERI AGENCY." : "",
-  );
+  const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
 
@@ -38,7 +35,6 @@ export function ContactPage() {
     const parsed = contactSchema.safeParse({
       name,
       email,
-      service_type: serviceType,
       message,
     });
 
@@ -59,7 +55,6 @@ export function ContactPage() {
       toast.success("Message sent — we'll get back to you within one business day.");
       setName("");
       setEmail("");
-      setServiceType("general");
       setMessage("");
     } catch (err) {
       console.error(err);
@@ -204,24 +199,7 @@ export function ContactPage() {
                   {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
                 </div>
 
-                <div className="sm:col-span-2">
-                  <Label htmlFor="service">Service type</Label>
-                  <Select value={serviceType} onValueChange={(v) => setServiceType(v)}>
-                    <SelectTrigger id="service" className="mt-1.5">
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {SERVICE_OPTIONS.map((opt) => (
-                        <SelectItem key={opt.value} value={opt.value}>
-                          {opt.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  {errors.service_type && (
-                    <p className="mt-1 text-xs text-destructive">{errors.service_type}</p>
-                  )}
-                </div>
+
 
                 <div className="sm:col-span-2">
                   <Label htmlFor="message">Message</Label>
