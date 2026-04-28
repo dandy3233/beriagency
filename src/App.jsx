@@ -13,6 +13,7 @@ import { Testimonials } from "./pages/Testimonials";
 // Layout
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/site/footer";
+import { BackToTop } from "./components/BackToTop";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <BackToTop />
     </BrowserRouter>
   );
 }

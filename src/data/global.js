@@ -10,9 +10,9 @@ export const CTA_BAND_CONTENT = {
 export const CONTACT_DATA = {
   email: "beriglobalhire@gmail.com",
   phone: ["+251 904 416 563", "+251 910 005 518"],
-  address: ["Addis Ababa, Ethiopia", "Lambert Area"],
-  office: "Addis Ababa, Ethiopia",
-  mapsUrl: "https://www.google.com/maps?q=9.0238567,38.818261&output=embed",
+  address: ["Dembel City Center, Bole, Addis Ababa, Ethiopia"],
+  office: "Dembel City Center, Bole, Addis Ababa, Ethiopia",
+  mapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.4041!2d38.7643036!3d9.0049509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85b039c25bc1%3A0x941677a8f60160fe!2sDembel%20City%20Center!5e0!3m2!1sen!2set!4v1714300000000!5m2!1sen!2set",
 };
 
 export const FOOTER_CONTENT = {

@@ -51,12 +51,12 @@ export function Navbar() {
           )}
         >
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-1.5 font-medium">
+            <div className="hidden lg:flex items-center gap-1.5 font-medium">
               <span className="text-white/60">location:</span>
               <span>{FOOTER_CONTENT.address?.join(", ")}</span>
             </div>
 
-            <div className="h-4 w-px bg-white/20" />
+            <div className="hidden lg:block h-4 w-px bg-white/20" />
 
             <a
               href={`mailto:${FOOTER_CONTENT.email}`}

@@ -4,6 +4,6 @@ export const siteConfig = {
   description: "Smart Travel Solutions Across Africa & Beyond",
   contact: {
     email: "barjalobalhire@gmail.com",
-    address: "Addis Ababa, Ethiopia",
+    address: "Dembel City Center, Bole, Addis Ababa, Ethiopia",
   },
 };

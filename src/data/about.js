@@ -83,7 +83,7 @@ export const TEAM = {
     "Our diverse team of recruitment professionals is dedicated to ensuring safe and legal overseas employment for Ethiopian workers.",
   members: [
     {
-      name: "Chaltu Tilaye Alemu",
+      name: "Semere Tilaye Alemu",
       role: "CEO",
       image: CEO,
     },
