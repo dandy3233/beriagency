@@ -1,7 +1,8 @@
 export const CTA_BAND_CONTENT = {
   eyebrow: "Ready when you are",
   title: "Let's connect you with the right opportunities.",
-  description: "Whether you need skilled manpower, legal processing, or a recruitment partnership — we'll respond within one business day.",
+  description:
+    "Whether you need skilled manpower, legal processing, or a recruitment partnership — we'll respond within one business day.",
   ctaPrimary: "Get Started",
   ctaSecondary: "Partner With Us",
 };
@@ -15,7 +16,8 @@ export const CONTACT_DATA = {
 };
 
 export const FOOTER_CONTENT = {
-  description: "A leading recruitment agency focused on providing efficient, transparent, and legal employment opportunities across the Gulf region and international markets.",
+  description:
+    "A leading recruitment agency focused on providing efficient, transparent, and legal employment opportunities across the Gulf region and international markets.",
   links: {
     company: [
       { label: "About Us", href: "/about" },
@@ -32,8 +34,6 @@ export const FOOTER_CONTENT = {
   copyright: "© {year} BERI AGENCY. All rights reserved.",
   ...CONTACT_DATA, // Use shared contact data
 };
-
-
 
 export const NAVBAR_CONTENT = {
   logo: "BERI AGENCY",
@@ -52,4 +52,3 @@ export const SOCIAL_LINKS = [
   { platform: "Telegram", href: "https://t.me/beriagency" },
   { platform: "TikTok", href: "https://www.tiktok.com/@beri.agency?_r=1&_t=ZS-95l9SVnHDmP" },
 ];
-

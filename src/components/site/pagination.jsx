@@ -33,7 +33,7 @@ function Pagination({ items, itemsPerPage, currentPage, onPageChange, onDataUpda
     left = Math.max(2, totalPages - 3);
     right = totalPages - 1;
   } else {
-    // Middle: This centers the page. 
+    // Middle: This centers the page.
     // If currentPage is 5, it shows 4, 5, 6.
     // This solves the "backwards" problem.
     left = currentPage - 1;
@@ -53,8 +53,10 @@ function Pagination({ items, itemsPerPage, currentPage, onPageChange, onDataUpda
 
   // ────────────────────────────────────────────────
   // Styling (Kept exactly as yours)
-  const baseBtn = "flex items-center justify-center w-9 h-9 md:w-12 md:h-12 rounded-md font-medium transition-all shadow-[0_4px_10px_rgba(0,0,0,0.08),0_10px_20px_-6px_rgba(0,0,0,0.12),0_-2px_6px_rgba(0,0,0,0.04)]";
-  const ellipsisStyle = "flex items-center justify-center font-medium text-gray-500 w-6 h-8 md:h-12 md:w-10";
+  const baseBtn =
+    "flex items-center justify-center w-9 h-9 md:w-12 md:h-12 rounded-md font-medium transition-all shadow-[0_4px_10px_rgba(0,0,0,0.08),0_10px_20px_-6px_rgba(0,0,0,0.12),0_-2px_6px_rgba(0,0,0,0.04)]";
+  const ellipsisStyle =
+    "flex items-center justify-center font-medium text-gray-500 w-6 h-8 md:h-12 md:w-10";
   const iconSize = "text-xl";
 
   return (
@@ -69,19 +71,22 @@ function Pagination({ items, itemsPerPage, currentPage, onPageChange, onDataUpda
 
       {pages.map((page, idx) =>
         page === "..." ? (
-          <span key={`ellipsis-${idx}`} className={ellipsisStyle}>…</span>
+          <span key={`ellipsis-${idx}`} className={ellipsisStyle}>
+            …
+          </span>
         ) : (
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`${baseBtn} ${currentPage === page
-              ? "bg-accent text-white font-semibold"
-              : "bg-white text-gray-800 hover:bg-primary hover:text-white"
-              }`}
+            className={`${baseBtn} ${
+              currentPage === page
+                ? "bg-accent text-white font-semibold"
+                : "bg-white text-gray-800 hover:bg-primary hover:text-white"
+            }`}
           >
             {page}
           </button>
-        )
+        ),
       )}
 
       <button

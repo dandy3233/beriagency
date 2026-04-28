@@ -4,12 +4,14 @@ export const CONTACT_HERO = {
   general: {
     eyebrow: "Contact",
     title: "Talk to our recruitment experts.",
-    description: "We respond within one business day. Based in Addis Ababa, serving employers and workers across the Gulf region and beyond.",
+    description:
+      "We respond within one business day. Based in Addis Ababa, serving employers and workers across the Gulf region and beyond.",
   },
   partner: {
     eyebrow: "Partner with us",
     title: "Let's build a recruitment partnership.",
-    description: "We respond within one business day. Based in Addis Ababa, serving employers across the Gulf region and beyond.",
+    description:
+      "We respond within one business day. Based in Addis Ababa, serving employers across the Gulf region and beyond.",
   },
 };
 

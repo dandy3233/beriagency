@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { LiaCertificateSolid } from "react-icons/lia";
-import { SectionHeader } from "@/components/site/section-header";
-import { CTABand } from "@/components/site/cta-band";
-import { CERTS, CERTS_HERO, CERTS_HEADER } from "@/data/certificates";
-import certImg from "@/assets/about.jpg";
-import Pagination from "@/components/site/pagination";
+import { SectionHeader } from "../components/site/section-header";
+import { CTABand } from "../components/site/cta-band";
+import { CERTS, CERTS_HERO, CERTS_HEADER } from "../data/certificates";
+import certImg from "../assets/images/about.jpg";
+import Pagination from "../components/site/pagination";
 
 export function Certificates() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,9 +31,7 @@ export function Certificates() {
           <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight text-balance md:text-6xl">
             {CERTS_HERO.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/80">
-            {CERTS_HERO.description}
-          </p>
+          <p className="mt-6 max-w-2xl text-lg text-white/80">{CERTS_HERO.description}</p>
         </div>
       </section>
 
@@ -53,12 +51,14 @@ export function Certificates() {
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-border bg-secondary/20">
                 {/* Verified Badge Top Right */}
-                <div className="
+                <div
+                  className="
                   absolute right-4 top-4 z-20
                   flex items-center justify-center
                   rounded-full bg-white/95 text-amber-700 shadow-sm backdrop-blur-md
                   h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20
-                ">
+                "
+                >
                   <LiaCertificateSolid className="text-amber-600 h-8 w-8 md:h-10 md:w-10 lg:h-14 lg:w-14" />
                 </div>
 

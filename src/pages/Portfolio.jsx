@@ -1,13 +1,13 @@
 import { useState, useMemo, useEffect } from "react";
 import { MapPin, TrendingUp, Tag } from "lucide-react";
-import { SectionHeader } from "@/components/site/section-header";
-import { CTABand } from "@/components/site/cta-band";
-import { cn } from "@/lib/utils";
-import p2 from "@/assets/portfolio/project-2.png";
-import { PROJECTS, FILTERS, PORTFOLIO_HERO, PORTFOLIO_FILTER_HEADER } from "@/data/portfolio";
-import Pagination from "@/components/site/pagination";
+import { SectionHeader } from "../components/site/section-header";
+import { CTABand } from "../components/site/cta-band";
+import { cn } from "../utils/helpers";
+import p2 from "../assets/images/portfolio/project-2.png";
+import { PROJECTS, FILTERS, PORTFOLIO_HERO, PORTFOLIO_FILTER_HEADER } from "../data/portfolio";
+import Pagination from "../components/site/pagination";
 
-export function PortfolioPage() {
+export function Portfolio() {
   const [active, setActive] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const [paginatedProjects, setPaginatedProjects] = useState([]);
@@ -42,9 +42,7 @@ export function PortfolioPage() {
           <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight text-balance md:text-6xl">
             {PORTFOLIO_HERO.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/80">
-            {PORTFOLIO_HERO.description}
-          </p>
+          <p className="mt-6 max-w-2xl text-lg text-white/80">{PORTFOLIO_HERO.description}</p>
         </div>
       </section>
 

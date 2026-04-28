@@ -1,18 +1,19 @@
-import p1 from "@/assets/portfolio/project-1.png";
-import p2 from "@/assets/portfolio/project-2.png";
-import p3 from "@/assets/portfolio/project-3.png";
-import dubai from "@/assets/portfolio/project-dubai.png";
-import qatar from "@/assets/portfolio/project-qatar.png";
-import kuwait from "@/assets/portfolio/project-kuwait.png";
-import abudhabi from "@/assets/portfolio/project-abudhabi.png";
-import southsudan from "@/assets/portfolio/project-southsudan.png";
-import botswana from "@/assets/portfolio/project-botswana.png";
-import global from "@/assets/portfolio/project-global.png";
+import p1 from "../assets/images/portfolio/project-1.png";
+import p2 from "../assets/images/portfolio/project-2.png";
+import p3 from "../assets/images/portfolio/project-3.png";
+import dubai from "../assets/images/portfolio/project-dubai.png";
+import qatar from "../assets/images/portfolio/project-qatar.png";
+import kuwait from "../assets/images/portfolio/project-kuwait.png";
+import abudhabi from "../assets/images/portfolio/project-abudhabi.png";
+import southsudan from "../assets/images/portfolio/project-southsudan.png";
+import botswana from "../assets/images/portfolio/project-botswana.png";
+import global from "../assets/images/portfolio/project-global.png";
 
 export const PORTFOLIO_HERO = {
   eyebrow: "Portfolio",
   title: "Real placements. Real impact.",
-  description: "A selection of recruitment successes our team has delivered across the Gulf region and beyond.",
+  description:
+    "A selection of recruitment successes our team has delivered across the Gulf region and beyond.",
 };
 
 export const PORTFOLIO_FILTER_HEADER = {

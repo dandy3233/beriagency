@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Quote, MapPin } from "lucide-react";
-import { TESTIMONIALS } from "@/data/testimonials";
-import { cn } from "@/lib/utils";
+import { TESTIMONIALS } from "../../data/testimonials";
+import { cn } from "../../utils/helpers";
 
 export function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,7 +13,7 @@ export function TestimonialSlider() {
     const updateItemsPerView = () => {
       setItemsPerView(window.innerWidth >= 768 ? 3 : 1);
     };
-    
+
     updateItemsPerView();
     window.addEventListener("resize", updateItemsPerView);
     return () => window.removeEventListener("resize", updateItemsPerView);
@@ -22,7 +22,7 @@ export function TestimonialSlider() {
   const totalItems = TESTIMONIALS.length;
   // Calculate total pages/dots
   const totalDots = Math.ceil(totalItems / itemsPerView);
-  
+
   const next = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % totalDots);
   }, [totalDots]);
@@ -34,12 +34,12 @@ export function TestimonialSlider() {
   }, [isAutoPlaying, next]);
 
   return (
-    <div 
+    <div
       className="relative mt-14 overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
-      <div 
+      <div
         className="flex transition-transform duration-1000 cubic-bezier(0.4, 0, 0.2, 1)"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
@@ -56,7 +56,9 @@ export function TestimonialSlider() {
                 </span>
                 <div className="text-left">
                   <div className="text-sm font-semibold text-primary-deep">{t.author}</div>
-                  <div className="text-[11px] text-muted-foreground uppercase tracking-wider">{t.role}</div>
+                  <div className="text-[11px] text-muted-foreground uppercase tracking-wider">
+                    {t.role}
+                  </div>
                 </div>
               </figcaption>
             </figure>
@@ -72,7 +74,7 @@ export function TestimonialSlider() {
             onClick={() => setCurrentIndex(i)}
             className={cn(
               "h-1.5 rounded-full transition-all duration-500",
-              i === currentIndex ? "w-10 bg-accent" : "w-2 bg-border hover:bg-accent/40"
+              i === currentIndex ? "w-10 bg-accent" : "w-2 bg-border hover:bg-accent/40",
             )}
             aria-label={`Go to page ${i + 1}`}
           />

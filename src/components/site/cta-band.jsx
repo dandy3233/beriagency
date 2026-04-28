@@ -1,7 +1,7 @@
-import { Link } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Button } from "../../components/Button";
 import { ArrowRight } from "lucide-react";
-import { CTA_BAND_CONTENT } from "@/data/global";
+import { CTA_BAND_CONTENT } from "../../data/global";
 
 export function CTABand() {
   return (
@@ -18,9 +18,7 @@ export function CTABand() {
           <h2 className="font-display text-3xl font-bold leading-tight text-white text-balance md:text-5xl">
             {CTA_BAND_CONTENT.title}
           </h2>
-          <p className="mt-4 text-lg text-white/80">
-            {CTA_BAND_CONTENT.description}
-          </p>
+          <p className="mt-4 text-lg text-white/80">{CTA_BAND_CONTENT.description}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild size="lg" className="bg-accent text-primary-deep hover:bg-accent-soft">
               <Link to="/contact">

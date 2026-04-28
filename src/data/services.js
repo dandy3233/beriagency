@@ -1,9 +1,21 @@
-import { Plane, Globe2, Briefcase, Handshake, FileCheck, ShieldCheck, MessageSquare, ClipboardList, Rocket, CheckCircle2 } from "lucide-react";
+import {
+  Plane,
+  Globe2,
+  Briefcase,
+  Handshake,
+  FileCheck,
+  ShieldCheck,
+  MessageSquare,
+  ClipboardList,
+  Rocket,
+  CheckCircle2,
+} from "lucide-react";
 
 export const SERVICES_HERO = {
   eyebrow: "Our services",
   title: "Professional Recruitment Solutions.",
-  description: "BERI AGENCY provides comprehensive sourcing, training, and deployment services to connect Ethiopian talent with leading employers across the Gulf region.",
+  description:
+    "BERI AGENCY provides comprehensive sourcing, training, and deployment services to connect Ethiopian talent with leading employers across the Gulf region.",
 };
 
 export const SERVICES = [

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
-import { SectionHeader } from "@/components/site/section-header";
-import { CTABand } from "@/components/site/cta-band";
-import servicesImg from "@/assets/services.jpg";
-import { SERVICES, STEPS, SERVICES_HERO, PROCESS_CONTENT } from "@/data/services";
-import Pagination from "@/components/site/pagination";
+import { SectionHeader } from "../components/site/section-header";
+import { CTABand } from "../components/site/cta-band";
+import servicesImg from "../assets/images/services.jpg";
+import { SERVICES, STEPS, SERVICES_HERO, PROCESS_CONTENT } from "../data/services";
+import Pagination from "../components/site/pagination";
 
-export function ServicesPage() {
+export function Services() {
   const [currentPage, setCurrentPage] = useState(1);
   const [paginatedServices, setPaginatedServices] = useState([]);
   const itemsPerPage = 6;

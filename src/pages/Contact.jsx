@@ -1,25 +1,32 @@
 import { useState } from "react";
-import { useSearch } from "@tanstack/react-router";
+import { useSearchParams } from "react-router-dom";
 import { Mail, MapPin, Phone, Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from "../components/Button";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
+import { Textarea } from "../components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { submitContact, contactSchema } from "@/server/contact.functions";
-import contactImg from "@/assets/contact.jpg";
-import { SERVICE_OPTIONS, CONTACT_INFO, CONTACT_HERO, CONTACT_DIRECT, CONTACT_FORM_TEXT } from "@/data/contact";
+} from "../components/ui/select";
+import { submitContact, contactSchema } from "../server/contact.functions";
+import contactImg from "../assets/images/contact.jpg";
+import {
+  SERVICE_OPTIONS,
+  CONTACT_INFO,
+  CONTACT_HERO,
+  CONTACT_DIRECT,
+  CONTACT_FORM_TEXT,
+} from "../data/contact";
 
-export function ContactPage() {
-  const search = useSearch({ from: "/contact" });
-  const isPartner = search.type === "partner";
+export function Contact() {
+  const [searchParams] = useSearchParams();
+  const type = searchParams.get("type");
+  const isPartner = type === "partner";
   const heroContent = isPartner ? CONTACT_HERO.partner : CONTACT_HERO.general;
 
   const [name, setName] = useState("");
@@ -68,7 +75,12 @@ export function ContactPage() {
     <>
       <section className="relative overflow-hidden bg-primary-deep text-white">
         <div className="absolute inset-0 z-0">
-          <img src={contactImg} alt="" className="h-full w-full object-cover transition-transform duration-[10s] hover:scale-110" loading="lazy" />
+          <img
+            src={contactImg}
+            alt=""
+            className="h-full w-full object-cover transition-transform duration-[10s] hover:scale-110"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-primary-deep/60 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep/80 via-primary-deep/40 to-transparent" />
         </div>
@@ -79,9 +91,7 @@ export function ContactPage() {
           <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight text-balance md:text-6xl">
             {heroContent.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/80">
-            {heroContent.description}
-          </p>
+          <p className="mt-6 max-w-2xl text-lg text-white/80">{heroContent.description}</p>
         </div>
       </section>
 
@@ -89,10 +99,10 @@ export function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-5">
           {/* Contact info */}
           <div className="lg:col-span-2">
-            <h2 className="font-display text-2xl font-bold text-primary-deep">{CONTACT_DIRECT.title}</h2>
-            <p className="mt-2 text-muted-foreground">
-              {CONTACT_DIRECT.description}
-            </p>
+            <h2 className="font-display text-2xl font-bold text-primary-deep">
+              {CONTACT_DIRECT.title}
+            </h2>
+            <p className="mt-2 text-muted-foreground">{CONTACT_DIRECT.description}</p>
 
             <ul className="mt-8 space-y-5">
               <li className="flex items-start gap-4">
@@ -121,7 +131,9 @@ export function ContactPage() {
                   </div>
                   <div className="flex flex-col gap-0.5">
                     {CONTACT_INFO.phone.map((num) => (
-                      <span key={num} className="font-medium text-foreground">{num}</span>
+                      <span key={num} className="font-medium text-foreground">
+                        {num}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -136,7 +148,9 @@ export function ContactPage() {
                   </div>
                   <div className="flex flex-col gap-0.5">
                     {CONTACT_INFO.address.map((line) => (
-                      <span key={line} className="font-medium text-foreground">{line}</span>
+                      <span key={line} className="font-medium text-foreground">
+                        {line}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -199,8 +213,6 @@ export function ContactPage() {
                   {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
                 </div>
 
-
-
                 <div className="sm:col-span-2">
                   <Label htmlFor="message">Message</Label>
                   <Textarea
@@ -238,9 +250,7 @@ export function ContactPage() {
                 )}
               </Button>
 
-              <p className="mt-4 text-xs text-muted-foreground">
-                {CONTACT_FORM_TEXT.footer}
-              </p>
+              <p className="mt-4 text-xs text-muted-foreground">{CONTACT_FORM_TEXT.footer}</p>
             </form>
           </div>
         </div>

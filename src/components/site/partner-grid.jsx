@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { PARTNERS } from "@/data/partners";
+import { PARTNERS } from "../../data/partners";
 
 export const LogoCard = ({ logo }) => (
   <div

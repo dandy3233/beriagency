@@ -1,20 +1,22 @@
 import { Award, ShieldCheck, FileBadge, Globe2 } from "lucide-react";
 // Import placeholders temporarily to fix the build error
-import p1 from "@/assets/certificates/1.png";
-import p2 from "@/assets/certificates/2.png";
-import p3 from "@/assets/certificates/3.png";
-import p4 from "@/assets/certificates/4.png";
+import p1 from "../assets/images/certificates/1.png";
+import p2 from "../assets/images/certificates/2.png";
+import p3 from "../assets/images/certificates/3.png";
+import p4 from "../assets/images/certificates/4.png";
 
 export const CERTS_HERO = {
   eyebrow: "Certificates & Compliance",
   title: "Credentials you can rely on.",
-  description: "We hold the licenses and follow the legal standards required to handle international recruitment for employers and governments.",
+  description:
+    "We hold the licenses and follow the legal standards required to handle international recruitment for employers and governments.",
 };
 
 export const CERTS_HEADER = {
   eyebrow: "Accreditation",
   title: "Our compliance & licensing",
-  description: "Official certificate documents are available on request and will be displayed here as they are uploaded.",
+  description:
+    "Official certificate documents are available on request and will be displayed here as they are uploaded.",
   footer: {
     text: "Want to see a specific certificate? ",
     linkText: "Email us",

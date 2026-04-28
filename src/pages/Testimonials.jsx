@@ -1,19 +1,15 @@
 import { Quote, Star } from "lucide-react";
-import { SectionHeader } from "@/components/site/section-header";
-import { CTABand } from "@/components/site/cta-band";
-import { TESTIMONIALS, TESTIMONIALS_HERO, TESTIMONIALS_HEADER } from "@/data/testimonials";
-import testimonialImg from "@/assets/services.jpg";
+import { SectionHeader } from "../components/site/section-header";
+import { CTABand } from "../components/site/cta-band";
+import { TESTIMONIALS, TESTIMONIALS_HERO, TESTIMONIALS_HEADER } from "../data/testimonials";
+import testimonialImg from "../assets/images/services.jpg";
 
-export function TestimonialsPage() {
+export function Testimonials() {
   return (
     <>
       <section className="relative overflow-hidden bg-primary-deep text-white">
         <div className="absolute inset-0 z-0">
-          <img
-            src={testimonialImg}
-            alt="Testimonials"
-            className="h-full w-full object-cover"
-          />
+          <img src={testimonialImg} alt="Testimonials" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-primary-deep/80 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-tr from-primary-deep via-primary-deep/60 to-transparent" />
         </div>
@@ -25,9 +21,7 @@ export function TestimonialsPage() {
           <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight text-balance md:text-6xl">
             {TESTIMONIALS_HERO.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/80">
-            {TESTIMONIALS_HERO.description}
-          </p>
+          <p className="mt-6 max-w-2xl text-lg text-white/80">{TESTIMONIALS_HERO.description}</p>
         </div>
       </section>
 

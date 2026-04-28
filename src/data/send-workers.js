@@ -21,5 +21,6 @@ export const WORKER_DESTINATIONS = [
 export const DESTINATIONS_CONTENT = {
   eyebrow: "Destinations",
   title: "Where We Send Workers",
-  description: "Connecting Ethiopia's skilled workforce to prime opportunities across the Gulf region and beyond.",
+  description:
+    "Connecting Ethiopia's skilled workforce to prime opportunities across the Gulf region and beyond.",
 };

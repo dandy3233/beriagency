@@ -1,8 +1,8 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FaWhatsapp, FaTelegramPlane, FaTiktok } from "react-icons/fa";
 import { Logo } from "./logo";
-import { FOOTER_CONTENT, SOCIAL_LINKS } from "@/data/global";
+import { FOOTER_CONTENT, SOCIAL_LINKS } from "../../data/global";
 
 const SOCIAL_ICONS = {
   WhatsApp: FaWhatsapp,
@@ -20,9 +20,7 @@ export function Footer() {
           <div className="space-y-6">
             <div className="space-y-4">
               <Logo variant="light" />
-              <p className="max-w-xs text-sm text-white/70">
-                {FOOTER_CONTENT.description}
-              </p>
+              <p className="max-w-xs text-sm text-white/70">{FOOTER_CONTENT.description}</p>
             </div>
 
             <div className="flex gap-4">

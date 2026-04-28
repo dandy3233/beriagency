@@ -1,31 +1,23 @@
 import { useState, useEffect } from "react";
-import { Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  ShieldCheck,
-  Clock,
-  Users,
-  Globe2,
-  MapPin,
-  Quote,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { SectionHeader } from "@/components/site/section-header";
-import { CTABand } from "@/components/site/cta-band";
-import { PartnerStaggeredGrid } from "@/components/site/partner-grid";
-import { TestimonialSlider } from "@/components/site/testimonial-slider";
-import aboutImg from "@/assets/about.jpg";
-import { SERVICES } from "@/data/services";
-import { TESTIMONIALS } from "@/data/testimonials";
-import { CLIENTS_HEADER } from "@/data/partners";
+import { Link } from "react-router-dom";
+import { ArrowRight, ShieldCheck, Clock, Users, Globe2, MapPin, Quote } from "lucide-react";
+import { Button } from "../components/Button";
+import { SectionHeader } from "../components/site/section-header";
+import { CTABand } from "../components/site/cta-band";
+import { PartnerStaggeredGrid } from "../components/site/partner-grid";
+import { TestimonialSlider } from "../components/site/testimonial-slider";
+import aboutImg from "../assets/images/about.jpg";
+import { SERVICES } from "../data/services";
+import { TESTIMONIALS } from "../data/testimonials";
+import { CLIENTS_HEADER } from "../data/partners";
 import {
   HERO_SLIDES,
   HERO_CONTENT,
   STATS,
   SERVICES_PREVIEW,
   TESTIMONIALS_PREVIEW,
-} from "@/data/home";
-import { ABOUT_PREVIEW } from "@/data/about";
+} from "../data/home";
+import { ABOUT_PREVIEW } from "../data/about";
 
 export function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -45,16 +37,18 @@ export function Home() {
           {HERO_SLIDES.map((slide, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
-                }`}
+              className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
             >
               <img
                 src={slide.image}
                 alt={slide.title}
                 width={1920}
                 height={1080}
-                className={`h-full w-full object-cover transition-transform duration-[6000ms] ease-out ${index === currentSlide ? "scale-110" : "scale-100"
-                  }`}
+                className={`h-full w-full object-cover transition-transform duration-[6000ms] ease-out ${
+                  index === currentSlide ? "scale-110" : "scale-100"
+                }`}
               />
             </div>
           ))}
@@ -103,8 +97,9 @@ export function Home() {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`h-1.5 rounded-full transition-all duration-500 ${index === currentSlide ? "w-10 bg-accent" : "w-3 bg-white/30 hover:bg-white/50"
-                  }`}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  index === currentSlide ? "w-10 bg-accent" : "w-3 bg-white/30 hover:bg-white/50"
+                }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
@@ -120,7 +115,9 @@ export function Home() {
               <div className="font-display text-4xl font-bold text-primary md:text-5xl">
                 {s.value}
               </div>
-              <div className="mt-1 text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
+              <div className="mt-1 text-sm text-muted-foreground uppercase tracking-wider">
+                {s.label}
+              </div>
             </div>
           ))}
         </div>

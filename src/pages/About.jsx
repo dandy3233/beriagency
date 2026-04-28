@@ -1,14 +1,22 @@
 import { ArrowRight, Sparkles, Globe2 } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Link } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
-import { SectionHeader } from "@/components/site/section-header";
-// import aboutImg from "@/assets/about.jpg";
-import aboutImg from "@/assets/12.png";
-import { VALUES, ABOUT_CARDS, ABOUT_HERO, VALUES_CONTENT, ABOUT_STATS, ABOUT_CTA, TEAM } from "@/data/about";
-import { SendWorkers } from "@/components/site/send-workers";
+import { cn } from "../utils/helpers";
+import { Link } from "react-router-dom";
+import { Button } from "../components/Button";
+import { SectionHeader } from "../components/site/section-header";
+// import aboutImg from "../assets/images/about.jpg";
+import aboutImg from "../assets/images/12.png";
+import {
+  VALUES,
+  ABOUT_CARDS,
+  ABOUT_HERO,
+  VALUES_CONTENT,
+  ABOUT_STATS,
+  ABOUT_CTA,
+  TEAM,
+} from "../data/about";
+import { SendWorkers } from "../components/site/send-workers";
 
-export function AboutPage() {
+export function About() {
   return (
     <>
       {/* Immersive Hero Section */}
@@ -53,16 +61,23 @@ export function AboutPage() {
 
               <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 {ABOUT_CARDS.slice(1).map((card) => (
-                  <div key={card.title} className="group flex items-start gap-4 p-4 rounded-2xl transition-colors hover:bg-secondary/50">
+                  <div
+                    key={card.title}
+                    className="group flex items-start gap-4 p-4 rounded-2xl transition-colors hover:bg-secondary/50"
+                  >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-primary group-hover:bg-primary group-hover:text-white transition-all">
                       <card.icon className="h-6 w-6" />
                     </div>
                     <div>
                       {card.eyebrow && (
-                        <p className="mb-1 text-xs font-bold uppercase tracking-widest text-accent">{card.eyebrow}</p>
+                        <p className="mb-1 text-xs font-bold uppercase tracking-widest text-accent">
+                          {card.eyebrow}
+                        </p>
                       )}
                       {/* <h4 className="font-display text-lg font-bold text-primary-deep">{card.title}</h4> */}
-                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{card.body}</p>
+                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                        {card.body}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -75,9 +90,14 @@ export function AboutPage() {
             <div className="rounded-[2.5rem] bg-primary-deep p-10 text-white shadow-elegant">
               <h3 className="font-display text-2xl font-bold mb-6">{ABOUT_STATS.title}</h3>
               <div className="space-y-6">
-                {ABOUT_STATS.items.map(item => (
-                  <div key={item.label} className="border-b border-white/10 pb-4 last:border-0 last:pb-0">
-                    <div className="text-xs uppercase tracking-widest text-accent font-bold opacity-80">{item.label}</div>
+                {ABOUT_STATS.items.map((item) => (
+                  <div
+                    key={item.label}
+                    className="border-b border-white/10 pb-4 last:border-0 last:pb-0"
+                  >
+                    <div className="text-xs uppercase tracking-widest text-accent font-bold opacity-80">
+                      {item.label}
+                    </div>
                     <div className="text-lg font-medium mt-1">{item.val}</div>
                   </div>
                 ))}
@@ -88,9 +108,15 @@ export function AboutPage() {
               <div className="absolute -right-4 -top-4 text-primary-deep/10">
                 <Globe2 className="h-32 w-32 rotate-12" />
               </div>
-              <h3 className="relative z-10 font-display text-2xl font-bold leading-tight whitespace-pre-line">{ABOUT_CTA.title}</h3>
-              <Link to={ABOUT_CTA.linkHref} className="relative z-10 mt-6 inline-flex items-center gap-2 font-bold uppercase tracking-widest text-xs group/btn">
-                {ABOUT_CTA.linkText} <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+              <h3 className="relative z-10 font-display text-2xl font-bold leading-tight whitespace-pre-line">
+                {ABOUT_CTA.title}
+              </h3>
+              <Link
+                to={ABOUT_CTA.linkHref}
+                className="relative z-10 mt-6 inline-flex items-center gap-2 font-bold uppercase tracking-widest text-xs group/btn"
+              >
+                {ABOUT_CTA.linkText}{" "}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -112,7 +138,10 @@ export function AboutPage() {
 
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             {VALUES.map((v) => (
-              <div key={v.title} className="group border-l border-white/10 pl-8 transition-colors hover:border-accent">
+              <div
+                key={v.title}
+                className="group border-l border-white/10 pl-8 transition-colors hover:border-accent"
+              >
                 <div className="mb-6 text-accent group-hover:scale-110 group-hover:-translate-y-1 transition-all">
                   <v.icon className="h-10 w-10" />
                 </div>
@@ -145,7 +174,9 @@ export function AboutPage() {
                 <div className="absolute inset-0 bg-primary-deep/10 transition-colors group-hover:bg-transparent" />
               </div>
               <h3 className="font-display text-xl font-bold text-primary-deep">{member.name}</h3>
-              <p className="mt-1 text-sm font-semibold text-accent uppercase tracking-widest">{member.role}</p>
+              <p className="mt-1 text-sm font-semibold text-accent uppercase tracking-widest">
+                {member.role}
+              </p>
             </div>
           ))}
         </div>

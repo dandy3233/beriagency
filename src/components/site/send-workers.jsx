@@ -1,16 +1,16 @@
-import React from 'react';
-import { WORKER_DESTINATIONS, DESTINATIONS_CONTENT } from '@/data/send-workers';
-import { SectionHeader } from '@/components/site/section-header';
+import React from "react";
+import { WORKER_DESTINATIONS, DESTINATIONS_CONTENT } from "../../data/send-workers";
+import { SectionHeader } from "../../components/site/section-header";
 
 function DestCard({ dest, index }) {
   return (
-    <div 
+    <div
       className="group flex items-center gap-4 rounded-full border border-border bg-card px-6 py-4 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:border-primary/40 whitespace-nowrap"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <span 
-        className="text-4xl animate-float transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:filter group-hover:drop-shadow-md" 
-        role="img" 
+      <span
+        className="text-4xl animate-float transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:filter group-hover:drop-shadow-md"
+        role="img"
         aria-label={dest.ariaLabel}
         style={{ animationDelay: `${index * 0.2}s` }}
       >
@@ -48,18 +48,23 @@ export function SendWorkers({ className }) {
       <div className="hidden lg:flex flex-col items-center gap-4 w-full">
         {/* Row 1: 4 Cards */}
         <div className="flex justify-center gap-4 w-full">
-          {row1.map((dest, i) => <DestCard key={dest.country} dest={dest} index={i} />)}
+          {row1.map((dest, i) => (
+            <DestCard key={dest.country} dest={dest} index={i} />
+          ))}
         </div>
         {/* Row 2: 5 Cards */}
         <div className="flex justify-center gap-4 w-full">
-          {row2.map((dest, i) => <DestCard key={dest.country} dest={dest} index={i + 4} />)}
+          {row2.map((dest, i) => (
+            <DestCard key={dest.country} dest={dest} index={i + 4} />
+          ))}
         </div>
         {/* Row 3: 4 Cards */}
         <div className="flex justify-center gap-4 w-full">
-          {row3.map((dest, i) => <DestCard key={dest.country} dest={dest} index={i + 9} />)}
+          {row3.map((dest, i) => (
+            <DestCard key={dest.country} dest={dest} index={i + 9} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
-

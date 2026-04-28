@@ -1,14 +1,14 @@
 import { ShieldCheck, Heart, Lightbulb, Globe2, Sparkles, Target, Eye } from "lucide-react";
-import CEO from "@/assets/team/Chaltu Tilaye Alemu.png";
-import ViceManager from "@/assets/team/Mustefa Mamo Hiko.png";
-import Manager from "@/assets/team/Severe Tilaye Alemu.png";
-
+import CEO from "../assets/images/team/Chaltu Tilaye Alemu.png";
+import ViceManager from "../assets/images/team/Mustefa Mamo Hiko.png";
+import Manager from "../assets/images/team/Severe Tilaye Alemu.png";
 
 export const ABOUT_HERO = {
   eyebrow: "About BERI AGENCY",
   title: "Travel Beyond",
   subtitle: "Limits.",
-  description: "BERI AGENCY is a professional recruitment agency dedicated to providing safe, legal, and efficient overseas employment opportunities for Ethiopian workers, while delivering reliable and transparent workforce solutions to employers in the Middle East.",
+  description:
+    "BERI AGENCY is a professional recruitment agency dedicated to providing safe, legal, and efficient overseas employment opportunities for Ethiopian workers, while delivering reliable and transparent workforce solutions to employers in the Middle East.",
 };
 
 export const ABOUT_STATS = {
@@ -16,14 +16,14 @@ export const ABOUT_STATS = {
   items: [
     { label: "Gulf Experts", val: "Wide Network" },
     { label: "Worker Support", val: "Welfare First" },
-    { label: "Legal Sourcing", val: "Compliant" }
-  ]
+    { label: "Legal Sourcing", val: "Compliant" },
+  ],
 };
 
 export const ABOUT_CTA = {
   title: "Ready to start \nyour recruitment journey?",
   linkText: "Explore Services",
-  linkHref: "/services"
+  linkHref: "/services",
 };
 
 export const ABOUT_CARDS = [
@@ -79,31 +79,33 @@ export const VALUES = [
 export const TEAM = {
   eyebrow: "Our Team",
   title: "The experts behind Beri Agency",
-  description: "Our diverse team of recruitment professionals is dedicated to ensuring safe and legal overseas employment for Ethiopian workers.",
+  description:
+    "Our diverse team of recruitment professionals is dedicated to ensuring safe and legal overseas employment for Ethiopian workers.",
   members: [
     {
       name: "Chaltu Tilaye Alemu",
       role: "CEO",
-      image: CEO
+      image: CEO,
     },
     {
       name: "Mustefa Mamo Hiko",
       role: "Manager",
-      image: ViceManager
+      image: ViceManager,
     },
 
     {
       name: "Severe Tilaye Alemu",
       role: "Vice Manager",
-      image: Manager
+      image: Manager,
     },
-  ]
+  ],
 };
 
 export const ABOUT_PREVIEW = {
   eyebrow: "Who we are",
   title: "Connecting Ethiopian Talent to Opportunities in the Middle East.",
-  description: "BERI Foreign Employees Agent PLC specializes in recruiting and deploying skilled Ethiopian workers to Gulf nations — ensuring safe, legal, and efficient employment abroad.",
+  description:
+    "BERI Foreign Employees Agent PLC specializes in recruiting and deploying skilled Ethiopian workers to Gulf nations — ensuring safe, legal, and efficient employment abroad.",
   features: [
     { label: "Compliant & licensed" },
     { label: "On-time, every time" },

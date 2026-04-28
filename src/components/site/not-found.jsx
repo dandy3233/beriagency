@@ -1,5 +1,5 @@
-import React from 'react';
-import { Home, ArrowLeft, Compass, LifeBuoy, Mail } from 'lucide-react';
+import React from "react";
+import { Home, ArrowLeft, Compass, LifeBuoy, Mail } from "lucide-react";
 
 export function DefaultNotFoundComponent() {
   return (
@@ -17,7 +17,7 @@ export function DefaultNotFoundComponent() {
             <Compass className="relative h-20 w-20 text-primary transition-all duration-700 ease-in-out group-hover:rotate-180 group-hover:scale-110" />
           </div>
         </div>
-        
+
         <h1 className="mt-8 text-8xl font-black tracking-tighter sm:text-[10rem] text-transparent bg-clip-text gradient-brand drop-shadow-sm">
           404
         </h1>
@@ -25,7 +25,8 @@ export function DefaultNotFoundComponent() {
           Page not found
         </h2>
         <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-xl mx-auto text-balance font-medium">
-          Sorry, we couldn't find the page you're looking for. It might have been moved, renamed, or perhaps it never existed in the first place.
+          Sorry, we couldn't find the page you're looking for. It might have been moved, renamed, or
+          perhaps it never existed in the first place.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
@@ -38,7 +39,7 @@ export function DefaultNotFoundComponent() {
               <span>Back to Home</span>
             </span>
           </a>
-          
+
           <button
             onClick={() => window.history.back()}
             className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border-2 border-border/50 bg-background/50 backdrop-blur-sm px-8 py-3.5 text-base font-medium text-foreground transition-all duration-300 hover:border-primary/50 hover:bg-primary/5 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background group"
@@ -55,8 +56,8 @@ export function DefaultNotFoundComponent() {
           </p>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {[
-              { name: 'Our Services', icon: LifeBuoy, to: '/services' },
-              { name: 'Contact Support', icon: Mail, to: '/contact' }
+              { name: "Our Services", icon: LifeBuoy, to: "/services" },
+              { name: "Contact Support", icon: Mail, to: "/contact" },
             ].map((link) => (
               <a
                 key={link.name}
