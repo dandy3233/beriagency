@@ -1,7 +1,7 @@
 import { ShieldCheck, Heart, Lightbulb, Globe2, Sparkles, Target, Eye } from "lucide-react";
 import CEO from "../assets/images/team/Chaltu Tilaye Alemu.png";
 import ViceManager from "../assets/images/team/Mustefa Mamo Hiko.png";
-import Manager from "../assets/images/team/Severe Tilaye Alemu.png";
+// import Manager from "../assets/images/team/Severe Tilaye Alemu.png";
 
 export const ABOUT_HERO = {
   eyebrow: "About BERI AGENCY",
@@ -91,12 +91,6 @@ export const TEAM = {
       name: "Mustefa Mamo Hiko",
       role: "Manager",
       image: ViceManager,
-    },
-
-    {
-      name: "Semere Tilaye Alemu",
-      role: "Vice Manager",
-      image: Manager,
     },
   ],
 };
